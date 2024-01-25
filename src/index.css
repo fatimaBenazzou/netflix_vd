@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+	font-family: "Bebas Neue", sans-serif;
+}
+.screen-shadow {
+	box-shadow: 5.808px 11.616px 72.603px -21.781px rgba(186, 45, 32, 0.4);
+}
+
+html {
+	cursor: url("/Vector.svg"), auto;
+}
+
+.animatedRect .horizontalBar {
+	--delay: 0s;
+	transform-origin: left center;
+	animation: Rect-Animation-Horizontal 1s ease-in-out both var(--delay);
+}
+.animatedRect .VerticalBar {
+	--delay: 0s;
+	transform-origin: left center;
+	animation: Rect-Animation-Vertical 1s ease-in-out both var(--delay);
+}
+.animatedRect .Bar-text,
+.animatedRect .heat-rect {
+	--delay: 0s;
+	animation: Text-Animation 0.5s ease-in-out both var(--delay);
+}
+
+@keyframes Rect-Animation-Horizontal {
+	from {
+		transform: scaleX(0.001);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+@keyframes Rect-Animation-Vertical {
+	from {
+		transform: scaleY(0.001);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
+@keyframes Text-Animation {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
